@@ -1,0 +1,308 @@
+/* ==========================================================================
+   General Styles
+   ========================================================================== */
+body {
+    background-color: #f7f3e9; 
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #d32f2f; 
+}
+
+/* Festive iconography */
+header h1::before, header h1::after {
+    content: "🎄";
+    margin: 0 10px;
+}
+
+/* ==========================================================================
+   Navigation Bar Styles
+   ========================================================================== */
+.navbar {
+    background: linear-gradient(90deg, #ff5f6d, #ffc371); 
+    padding: 15px 15px 20px 15px; 
+}
+
+.navbar-brand {
+    font-size: 2rem; 
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-text {
+    margin-top: 10px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex; 
+    justify-content: space-evenly; 
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.navbar-nav .nav-item {
+    flex: 1; 
+    text-align: center; 
+    color: white;
+}
+
+/* Navigation Link Styling */
+.navbar-nav .nav-link {
+    color: white !important;
+    background-color: #388e3c; 
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    border-radius: 5px;
+    margin: 0 5px; 
+    font-size: 0.9rem; 
+    text-align: center;
+    display: block; 
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+/* Logout Button Styling */
+.navbar-nav .btn-logout {
+    background-color: #d32f2f; 
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .btn-logout:hover {
+    background-color: #b71c1c;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Form Styles
+   ========================================================================== */
+form {
+    max-width: 400px;
+    margin: 50px auto; 
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+form h1 {
+    margin-bottom: 20px; 
+    font-size: 1.5rem;
+    color: #d32f2f; 
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; 
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* Button Styles */
+button, .btn {
+    background-color: #388e3c; 
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+button:hover, .btn:hover {
+    background-color: #2e7d32; 
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px); 
+}
+
+/* Small Danger Button */
+.btn-danger.btn-sm {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    padding: 0.15rem 0.3rem !important;
+    font-size: 0.7rem !important;
+    line-height: 1 !important;
+    margin-left: 5px !important;
+    width: 75px !important;
+}
+
+/* ==========================================================================
+   Christmas List Item Styles
+   ========================================================================== */
+.item-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 2.5rem;
+    margin-bottom: 1rem;
+    min-height: 60px;
+    border-radius: 15px;
+    background-color: #e8f7ff;
+    background-image: 
+        radial-gradient(circle at 50% 50%, #007bff 3px, transparent 3px),
+        linear-gradient(0deg, transparent 47%, #007bff 47%, #007bff 53%, transparent 53%),
+        linear-gradient(60deg, transparent 47%, #007bff 47%, #007bff 53%, transparent 53%),
+        linear-gradient(120deg, transparent 47%, #007bff 47%, #007bff 53%, transparent 53%);
+    background-size: 40px 40px;
+}
+
+.item-content {
+    background: white;
+    padding: 0.5rem 2rem;    
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: auto;             
+    min-width: 200px;        
+}
+
+.item-text {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Delete Button Styling */
+.delete-form {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    z-index: 1;
+    max-width: none;
+}
+
+.delete-btn {
+    background-color: rgba(220, 53, 69, 0.9) !important;
+    border: none !important;
+    color: white !important;
+    padding: 0.15rem 0.3rem !important;
+    font-size: 0.7rem !important;
+    line-height: 1 !important;
+    border-radius: 3px !important;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+    background-color: #dc3545 !important;
+}
+
+/* ==========================================================================
+   Alert/Flash Message Styles
+   ========================================================================== */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Success message styling */
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* Error message styling */
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Optional hover effect */
+.alert:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================================
+   Secret Santa Styles
+   ========================================================================== */
+#participants-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#add-participant {
+    margin-bottom: 20px;
+}
+
+.participant-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+#secret-santa-form {
+    max-width: none !important;
+}
+
+#secret-santa-form .form-control {
+    width: 95% !important;
+    margin-right: 5px !important;
+}
+
+#secret-santa-form .mb-3.d-flex {
+    display: flex !important;
+    gap: 5px !important;
+    width: 100% !important;
+}
+
+#secret-santa-form .mb-3.d-flex .form-control {
+    flex: 1 !important;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media (max-width: 768px) {
+    #secret-santa-form {
+        margin-bottom: 2rem;
+    }
+}

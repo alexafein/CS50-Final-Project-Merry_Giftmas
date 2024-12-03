@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Item
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="post">
+        <h1 class="text-center">🎄 Add an Item to Your Christmas List 🎁</h1>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="name" placeholder="Item name" type="text">
+        </div>
+        <button class="btn btn-success w-auto mx-auto d-block" type="submit">Add Item</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    {% if items %}
+        <div class="items-grid">
+            {% for item in items %}
+                <div class="item-card">
+                    <div class="item-content">
+                        <span class="item-text">{{ item['item'] }}</span>
+                    </div>
+                    <form action="/delete_item/{{ item['id'] }}" method="post" class="delete-form">
+                        <button type="submit" class="btn btn-danger btn-sm delete-btn">✕</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center mt-4">
+            <h2>🎄 You haven't added anything to your Christmas list yet! 🎁</h2>
+            <a href="/add" class="btn btn-success mt-3">Add Your First Item</a>
+        </div>
+    {% endif %}
+{% endblock %}

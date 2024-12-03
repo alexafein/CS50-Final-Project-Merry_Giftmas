@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ username }}'s List
+{% endblock %}
+
+{% block main %}
+    {% if items %}
+        <h2 class="text-center mb-4">🎁 {{ username }}'s Christmas List 🎄</h2>
+        <div class="items-grid">
+            {% for item in items %}
+                <div class="item-card">
+                    <div class="item-content">
+                        <span class="item-text">{{ item['item'] }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center mt-4">
+            <h2>🎄 {{ username }} hasn't added anything to their Christmas list yet! 🎁</h2>
+        </div>
+    {% endif %}
+{% endblock %} 
